@@ -1,0 +1,50 @@
+# ── Core Web / API ────────────────────────────────────────────────
+fastapi
+uvicorn[standard]
+pydantic
+python-multipart
+python-dotenv
+httpx
+
+# ── Databases ─────────────────────────────────────────────────────
+asyncpg
+motor
+redis[asyncio]
+sqlalchemy[asyncio]
+elasticsearch[async]
+qdrant-client
+
+# ── Kafka ─────────────────────────────────────────────────────────
+confluent-kafka
+
+# ── Auth / Security ───────────────────────────────────────────────
+python-jose[cryptography]
+passlib[bcrypt]
+
+# ── Observability ─────────────────────────────────────────────────
+prometheus-client
+structlog
+opentelemetry-api
+opentelemetry-sdk
+opentelemetry-instrumentation-fastapi
+opentelemetry-exporter-otlp-proto-grpc
+
+# ── ML (pre-built wheels, no MSVC needed) ─────────────────────────
+numpy
+pandas
+pyarrow
+joblib
+
+# ── Agentic AI ────────────────────────────────────────────────────
+langchain
+langgraph
+langchain-openai
+langchain-anthropic
+
+# ── Testing ───────────────────────────────────────────────────────
+pytest
+pytest-asyncio
+pytest-cov
+testcontainers
+faker
+locust

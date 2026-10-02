@@ -1,0 +1,14 @@
+# ML Engine requirements — install with pre-built wheels only
+# Usage: pip install -r requirements-ml.txt --only-binary :all:
+#
+# This avoids MSVC compiler errors on Windows when packages try to
+# build from source.
+
+scikit-learn
+xgboost
+lightgbm
+numpy
+pandas
+pyarrow
+joblib
+sentence-transformers

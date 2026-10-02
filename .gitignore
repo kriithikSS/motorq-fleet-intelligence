@@ -1,0 +1,6 @@
+
+.env
+*.env.local
+__pycache__/
+services/api-gateway/__pycache__/
+services/simulator/__pycache__/

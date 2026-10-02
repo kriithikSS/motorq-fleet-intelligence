@@ -1,0 +1,19 @@
+{
+  "type": "record",
+  "name": "TelemetryEvent",
+  "namespace": "com.motorq.telemetry",
+  "fields": [
+    {"name": "event_id", "type": "string"},
+    {"name": "tenant_id", "type": "string"},
+    {"name": "vin", "type": "string"},
+    {"name": "ts", "type": "string"},
+    {"name": "lat", "type": ["null", "double"], "default": null},
+    {"name": "lon", "type": ["null", "double"], "default": null},
+    {"name": "speed_kmh", "type": ["null", "double"], "default": null},
+    {"name": "soc_pct", "type": ["null", "double"], "default": null},
+    {"name": "odo_km", "type": ["null", "double"], "default": null},
+    {"name": "dtc", "type": ["null", {"type": "array", "items": "string"}], "default": null},
+    {"name": "evt", "type": ["null", "string"], "default": null},
+    {"name": "seq", "type": "long"}
+  ]
+}
