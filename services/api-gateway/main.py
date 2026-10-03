@@ -715,14 +715,16 @@ async def agent_chat(
         full_prompt = f"{system_prompt}\n\nUser question: {req.message}"
 
         if provider == "google":
-            import google.generativeai as genai
-            genai.configure(api_key=api_key)
-            model = genai.GenerativeModel(model_name)
-            # Run in thread pool to avoid blocking async loop
+            from google import genai as google_genai
+            client = google_genai.Client(api_key=api_key)
             import asyncio
             loop = asyncio.get_event_loop()
             result = await loop.run_in_executor(
-                None, lambda: model.generate_content(full_prompt)
+                None,
+                lambda: client.models.generate_content(
+                    model=model_name,
+                    contents=full_prompt
+                )
             )
             response_text = result.text
 

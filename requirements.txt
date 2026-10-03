@@ -39,8 +39,7 @@ joblib
 langchain
 langgraph
 langchain-core
-google-generativeai
-langchain-google-genai
+google-genai
 langchain-openai
 langchain-anthropic
 
