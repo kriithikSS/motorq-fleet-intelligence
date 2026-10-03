@@ -682,7 +682,7 @@ async def agent_chat(
     (google/openai/anthropic).
     """
     provider = os.environ.get("LLM_PROVIDER", "google").lower()
-    model_name = os.environ.get("LLM_MODEL", "gemini-1.5-flash")
+    model_name = os.environ.get("LLM_MODEL", "gemini-3.8-flash")
     api_key = os.environ.get("GEMINI_API_KEY", "")
 
     try:
