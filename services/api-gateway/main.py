@@ -682,7 +682,7 @@ async def agent_chat(
     (google/openai/anthropic).
     """
     provider = os.environ.get("LLM_PROVIDER", "google").lower()
-    model_name = os.environ.get("LLM_MODEL", "gemini-2.5-pro")
+    model_name = os.environ.get("LLM_MODEL", "gemini-1.5-flash")
 
     try:
         # Build fleet context from DB (or mock)
